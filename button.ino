@@ -12,11 +12,8 @@ Button buttons[] = {
 #define NUM_BUTTONS sizeof(buttons)
 
 uint8_t buttonReading = 0;
-
-// the following variables are unsigned longs because the time, measured in
-// milliseconds, will quickly become a bigger number than can be stored in an int.
-unsigned long lastDebounceTime = 0; // the last time the output pin was toggled
-unsigned long debounceDelay = 50;	// the debounce time; increase if the output
+unsigned long lastDebounceTime = 0;
+unsigned long debounceDelay = 50;
 
 void setup()
 {
@@ -31,7 +28,7 @@ void loop()
 
 	for (int i = 0; i < NUM_BUTTONS; i++)
 	{
-		Button* currButton = &buttons[i];
+		Button *currButton = &buttons[i];
 
 		buttonReading = digitalRead(currButton->pin);
 
@@ -47,17 +44,17 @@ void loop()
 
 			if (currButton->state == LOW)
 			{
-				switch (currButton->pin) {
-					case WHITE_PIN:
-						Serial.println("White pressed");
-						break;
-					case BLUE_PIN:
-						Serial.println("Blue pressed");
-						break;
-					default:
-						break;
+				switch (currButton->pin)
+				{
+				case WHITE_PIN:
+					Serial.println("White pressed");
+					break;
+				case BLUE_PIN:
+					Serial.println("Blue pressed");
+					break;
+				default:
+					break;
 				}
-				
 			}
 		}
 
