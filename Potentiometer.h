@@ -28,7 +28,7 @@ public:
 		Serial.println(this->reading);
 	}
 
-	DialStatus TakeReading()
+	DialStatus GetReading()
 	{
 		this->reading = analogRead(this->pin);
 
