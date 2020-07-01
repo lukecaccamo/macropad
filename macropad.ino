@@ -40,28 +40,22 @@ void pollButtons()
 			switch (buttons[i].pin)
 			{
 			case WHITE_PIN:
-			// Binding for scripts
-				doubleMod(KEY_LEFT_CTRL, KEY_LEFT_ALT, KEY_HOME);
+				pressAndRelease(NUMPAD_1);
 				break;
 			case GREEN_PIN:
-			// Binding for scripts
-				doubleMod(KEY_LEFT_CTRL, KEY_LEFT_ALT, KEY_END);
+				pressAndRelease(NUMPAD_2);
 				break;
 			case BLACK_PIN:
-			// Binding for scripts
-				doubleMod(KEY_LEFT_CTRL, KEY_LEFT_ALT, KEY_PAGE_UP);
+				pressAndRelease(NUMPAD_3);
 				break;
 			case YELLOW_PIN:
-			// Goto Implementation
-				shortCut(KEY_LEFT_CTRL, KEY_F12);
+				pressAndRelease(NUMPAD_4);
 				break;
 			case RED_PIN:
-			// Run unit test
-				chord(KEY_LEFT_CTRL, 'u', 'r');
+				pressAndRelease(NUMPAD_5);
 				break;
 			case BLUE_PIN:
-			// Build
-				doubleMod(KEY_LEFT_CTRL, KEY_LEFT_SHIFT, 'b');
+				pressAndRelease(NUMPAD_6);
 				break;
 
 			default:
